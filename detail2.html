@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Experience Design for Dashboard App</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .project-container {
+        background-color: white;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      }
+      .full-width-image {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .breadcrumb {
+        padding: 20px;
+        background-color: #f8f9fa;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 14px;
+      }
+      .breadcrumb a {
+        color: black;
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .project-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 40pt;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .image-container {
+        position: relative;
+      }
+
+      /* Slider Styles */
+      .project-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .slider-container {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 300%;
+      }
+      .slider-slide {
+        width: 33.33%;
+        flex-shrink: 0;
+      }
+      .slider-slide img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .slider-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+      }
+      .slider-dot {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .slider-dot.active {
+        background-color: white;
+      }
+
+      /* Slider Checkbox Hack */
+      .slider-toggle {
+        display: none;
+      }
+      #slide1:checked ~ .slider-container {
+        transform: translateX(0);
+      }
+      #slide2:checked ~ .slider-container {
+        transform: translateX(-33.33%);
+      }
+      #slide3:checked ~ .slider-container {
+        transform: translateX(-66.66%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html#contact">contact</a></li>
+        <li>works</li>
+        <li>expertience</li>
+        <li class="empty"></li>
+        <li>behance</li>
+        <li><a href="https://x.com/anzanul" target="_blank">twitter</a></li>
+        <li>linkedin</li>
+      </ul>
+    </nav>
+
+    <div class="project-container">
+      <div class="image-container">
+        <img
+          src="estp.jpg"
+          class="full-width-image"
+          alt="Dashboard App UX Design Project"
+        />
+        <h1 class="project-title">ESTP<br />The Fearless Doer</h1>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> / ESTP – The Fearless Doer
+      </div>
+      <section class="project" style="padding-top: 50px">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Siapa Itu ESTP?</h2>
+              <p>
+                ESTP itu jiwa petualang sejati. Mereka hidup untuk aksi,
+                adrenalin, dan tantangan. Penuh spontanitas, suka mencoba hal
+                baru, dan gak suka terjebak rutinitas. ESTP tuh tipe orang yang
+                begitu muncul, semua ruangan langsung kerasa hidup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project blue">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Ciri-Ciri & Khas ESTP</h2>
+              <p>Yang bikin ESTP beda banget dari yang lain:</p>
+              <ul>
+                <li>Super spontan, cepet ambil keputusan tanpa banyak drama</li>
+                <li>Suka aksi, dari olahraga ekstrem sampai debat panas</li>
+                <li>Gak suka basa-basi, to the point dan blak-blakan</li>
+                <li>Jago membaca situasi dan cepat beradaptasi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Kekuatan Sang Petualang</h2>
+              <p>Ini alasan kenapa ESTP itu keren banget:</p>
+              <ul>
+                <li>Pemecah masalah real-time—gercep dan efektif</li>
+                <li>Berani ambil risiko, bahkan saat orang lain ragu</li>
+                <li>Energi positifnya nular ke sekitar</li>
+                <li>Sering jadi center of attention tanpa usaha keras</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project blue">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Hal yang Perlu Diwaspadai</h2>
+              <p>ESTP keren, tapi tetap manusia biasa juga:</p>
+              <ul>
+                <li>Sering keburu-buru ambil keputusan tanpa mikir panjang</li>
+                <li>Kurang suka aturan dan struktur yang kaku</li>
+                <li>Bisa bosan cepet kalau gak ada tantangan baru</li>
+                <li>
+                  Susah fokus jangka panjang, karena terlalu in-the-moment
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>ESTP Gallery</h2>
+              <div class="gallery-flex">
+                <img src="estp1.jpg" alt="ENTJ Visual 1" />
+                <img src="estp2.jpg" alt="ENTJ Visual 2" />
+                <img src="estp3.jpg" alt="ENTJ Visual 3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer id="contact">
+      <h2>
+        Interested in<br />
+        learning more?<br />aghniyahghina@gmail.com
+      </h2>
+      <p>designed & developed by gynaa 2025</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Experience Design for Dashboard App</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.css" type="text/css" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .project-container {
+        background-color: white;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      }
+      .full-width-image {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .breadcrumb {
+        padding: 20px;
+        background-color: #f8f9fa;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 14px;
+      }
+      .breadcrumb a {
+        color: black;
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+      .project-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 40pt;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .image-container {
+        position: relative;
+      }
+
+      /* Slider Styles */
+      .project-slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+      .slider-container {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 300%;
+      }
+      .slider-slide {
+        width: 33.33%;
+        flex-shrink: 0;
+      }
+      .slider-slide img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .slider-controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+      }
+      .slider-dot {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .slider-dot.active {
+        background-color: white;
+      }
+
+      /* Slider Checkbox Hack */
+      .slider-toggle {
+        display: none;
+      }
+      #slide1:checked ~ .slider-container {
+        transform: translateX(0);
+      }
+      #slide2:checked ~ .slider-container {
+        transform: translateX(-33.33%);
+      }
+      #slide3:checked ~ .slider-container {
+        transform: translateX(-66.66%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html#contact">contact</a></li>
+        <li>works</li>
+        <li>expertience</li>
+        <li class="empty"></li>
+        <li>behance</li>
+        <li><a href="https://x.com/anzanul" target="_blank">twitter</a></li>
+        <li>linkedin</li>
+      </ul>
+    </nav>
+
+    <div class="project-container">
+      <div class="image-container">
+        <img
+          src="entj.jpg"
+          class="full-width-image"
+          alt="Dashboard App UX Design Project"
+        />
+        <h1 class="project-title">ENTJ<br />The Visionary Commander</h1>
+      </div>
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a> / ENTJ – The Visionary Commander
+      </div>
+      <section class="project" style="padding-top: 50px">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Siapa Itu ENTJ?</h2>
+              <p>
+                ENTJ itu pemimpin alami. Punya visi besar, gak takut ambil alih
+                situasi, dan selalu tahu harus ke mana dan gimana caranya sampai
+                ke sana. Mereka tegas, logis, dan selalu mikirin efisiensi.
+                Hidup bagi ENTJ itu tentang misi—dan mereka gak main-main.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project blue">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Ciri-Ciri & Khas ENTJ</h2>
+              <p>Ini yang bikin ENTJ beda kelas:</p>
+              <ul>
+                <li>Pemikir strategis, selalu lihat the big picture</li>
+                <li>Karismatik dan percaya diri</li>
+                <li>Suka tantangan dan gak mudah nyerah</li>
+                <li>Perfeksionis, terutama soal hasil dan proses</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Kekuatan Sang Komandan</h2>
+              <p>Kenapa ENTJ sering jadi tokoh besar:</p>
+              <ul>
+                <li>Jago ngatur tim dan bikin semua orang kerja optimal</li>
+                <li>Berani ambil keputusan penting di saat genting</li>
+                <li>Kritis, analitis, dan logis banget</li>
+                <li>Selalu punya goal jelas dan rencana konkrit</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project blue">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>Hal yang Perlu Diwaspadai</h2>
+              <p>Biarpun powerful, ENTJ juga punya sisi rawan:</p>
+              <ul>
+                <li>Terkesan terlalu bossy atau dominan</li>
+                <li>Bisa terlalu fokus sama hasil, lupa perasaan orang</li>
+                <li>Gak sabaran sama yang dianggap lambat</li>
+                <li>Overwork karena selalu pengen semuanya sempurna</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <h2>ENTJ Gallery</h2>
+              <div class="gallery-flex">
+                <img src="entj1.jpg" alt="ENTJ Visual 1" />
+                <img src="entj2.jpg" alt="ENTJ Visual 2" />
+                <img src="entj3.jpg" alt="ENTJ Visual 3" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer id="contact">
+      <h2>
+        Interested in<br />
+        learning more?<br />aghniyahghina@gmail.com
+      </h2>
+      <p>designed & developed by gynaa 2025</p>
+    </footer>
+  </body>
+</html>
